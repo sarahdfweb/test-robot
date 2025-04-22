@@ -22,6 +22,8 @@
     <li>Python – linguagem base para o projeto</li>
     <li>VS Code – editor de código usado no desenvolvimento</li>
   </ul>
- 
+  
+   ![436226592-5c6dc738-c964-46c5-be0e-fdfec6446a63](https://github.com/user-attachments/assets/2ded7de1-ec75-4d04-b044-9a8c69b94808)
+
 </body>
 </html>
