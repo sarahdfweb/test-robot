@@ -10,8 +10,8 @@
   <ul>
     <li>Verificar se ao preencher corretamente o formulário, um card é criado no time escolhido</li>
     <li>Verificar se é possível criar múltiplos cards com dados válidos</li>
-    <li>Verificar se conseguimos criar cards para todos os times disponíveis</li>
-    <li>Verificar a exibição de mensagens de erro quando os campos obrigatórios não forem preenchidos</li>
+    <li>Verificar se é possível criar cards para todos os times disponíveis</li>
+    <li>Verificar a exibição de mensagens de erro quando os campos obrigatórios não forem preenchidos </li>
   </ul>
 
   <p class="section-title"> Tecnologias e Bibliotecas Utilizadas</p>
@@ -22,6 +22,6 @@
     <li>Python – linguagem base para o projeto</li>
     <li>VS Code – editor de código usado no desenvolvimento</li>
   </ul>
-
+ 
 </body>
 </html>
