@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.11.4 on win32)" generated="2026-03-29T21:58:49.528332" rpa="false" schemaversion="5">
+<suite id="s1" name="Criar-Card-Invalido" source="C:\projetosQA\robot\testes\criar-card-invalido.robot">
+<test id="s1-t1" name="Nao deve criar card com formulario vazio" line="9">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:49.751332" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T21:58:49.751332" elapsed="1.605152"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T21:58:51.357485" elapsed="0.021995"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T21:58:51.379480" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:49.750331" elapsed="1.630148"/>
+</kw>
+<kw name="Quando eu clicar em criar card sem preencher nada">
+<kw name="Clicar em criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T21:58:51.381480" elapsed="0.474143"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:51.855623" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T21:58:51.855623" elapsed="0.569108"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:51.380479" elapsed="1.044252"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:51.380479" elapsed="1.044252"/>
+</kw>
+<kw name="Então devo visualizar mensagens obrigatorias">
+<kw name="Validar erro de nome" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:52.644772" level="INFO">Element 'id=form-nome-erro' is displayed.</msg>
+<arg>${ERRO_NOME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T21:58:52.425658" elapsed="0.219114"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:52.425658" elapsed="0.219114"/>
+</kw>
+<kw name="Validar erro de cargo" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:52.861489" level="INFO">Element 'id=form-cargo-erro' is displayed.</msg>
+<arg>${ERRO_CARGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T21:58:52.644772" elapsed="0.216717"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:52.644772" elapsed="0.216717"/>
+</kw>
+<kw name="Validar erro de time" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:53.077859" level="INFO">Element 'id=form-times-erro' is displayed.</msg>
+<arg>${ERRO_TIME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T21:58:52.861489" elapsed="0.216370"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:52.861489" elapsed="0.216370"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:52.424731" elapsed="0.653128"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T21:58:53.078861" elapsed="2.162829"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:53.078861" elapsed="2.163827"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:49.749332" elapsed="5.494356"/>
+</test>
+<test id="s1-t2" name="Nao deve criar card sem nome" line="13">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:55.250416" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T21:58:55.249415" elapsed="1.710928"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T21:58:56.960343" elapsed="0.125147"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T21:58:57.085490" elapsed="0.000515"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:55.248415" elapsed="1.837590"/>
+</kw>
+<kw name="Quando eu preencher apenas cargo">
+<kw name="Preencher cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:57.087002" level="INFO">Typing text 'QA' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T21:58:57.087002" elapsed="0.382069"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:57.896146" level="INFO">Content of text field 'id=form-cargo' is 'QA'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-03-29T21:58:57.469071" elapsed="0.427075"/>
+</kw>
+<arg>QA</arg>
+<status status="PASS" start="2026-03-29T21:58:57.087002" elapsed="0.809144"/>
+</kw>
+<kw name="Clicar em criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:58:58.308743" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6d916]
+	chromedriver!(No symbol) [0x7ff7c3eb8313]
+	chromedriver!(No symbol) [0x7ff7c3eefe92]
+	chromedriver!(No symbol) [0x7ff7c3eea011]
+	chromedriver!(No symbol) [0x7ff7c3ee92c3]
+	chromedriver!(No symbol) [0x7ff7c3e36565]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7c3e3532a]
+	chromedriver!GetHandleVerifier [0x7ff7c4564b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</msg>
+<msg time="2026-03-29T21:58:58.309743" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7e5d0]
+	chromedriver!(No symbol) [0x7ff7c3f13f14]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</msg>
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2026-03-29T21:58:57.896146" elapsed="0.444105">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7e5d0]
+	chromedriver!(No symbol) [0x7ff7c3f13f14]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-29T21:58:58.340251" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-03-29T21:58:57.896146" elapsed="0.445110">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7e5d0]
+	chromedriver!(No symbol) [0x7ff7c3f13f14]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</kw>
+<status status="FAIL" start="2026-03-29T21:58:57.086005" elapsed="1.255251">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7e5d0]
+	chromedriver!(No symbol) [0x7ff7c3f13f14]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</kw>
+<kw name="Então devo ver erro de nome">
+<status status="NOT RUN" start="2026-03-29T21:58:58.341256" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T21:58:58.342256" elapsed="2.121333"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:58:58.342256" elapsed="2.121333"/>
+</kw>
+<status status="FAIL" start="2026-03-29T21:58:55.246407" elapsed="5.217182">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7e5d0]
+	chromedriver!(No symbol) [0x7ff7c3f13f14]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</test>
+<test id="s1-t3" name="Nao deve criar card sem cargo" line="17">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:00.466590" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T21:59:00.466590" elapsed="1.651581"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T21:59:02.118171" elapsed="0.134199"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T21:59:02.252370" elapsed="0.000993"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:00.465590" elapsed="1.787773"/>
+</kw>
+<kw name="Quando eu preencher apenas nome">
+<kw name="Preencher nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:02.254365" level="INFO">Typing text 'Sarah' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T21:59:02.254365" elapsed="0.381242"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:03.059495" level="INFO">Content of text field 'id=form-nome' is 'Sarah'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-03-29T21:59:02.636129" elapsed="0.423366"/>
+</kw>
+<arg>Sarah</arg>
+<status status="PASS" start="2026-03-29T21:59:02.254365" elapsed="0.805130"/>
+</kw>
+<kw name="Clicar em criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T21:59:03.059495" elapsed="0.485761"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:03.545256" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T21:59:03.545256" elapsed="0.562788"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:03.059495" elapsed="1.048549"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:02.253363" elapsed="1.854681"/>
+</kw>
+<kw name="Então devo ver erro de cargo">
+<kw name="Validar erro de cargo" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:04.327399" level="INFO">Element 'id=form-cargo-erro' is displayed.</msg>
+<arg>${ERRO_CARGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T21:59:04.109045" elapsed="0.218354"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:04.108044" elapsed="0.219355"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:04.108044" elapsed="0.219355"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T21:59:04.327934" elapsed="2.153873"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:04.327934" elapsed="2.153873"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:00.465590" elapsed="6.016217"/>
+</test>
+<test id="s1-t4" name="Nao deve criar card sem selecionar time" line="21">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:06.483802" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T21:59:06.483802" elapsed="1.673735"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T21:59:08.157537" elapsed="0.125934"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T21:59:08.283975" elapsed="0.000009"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:06.482801" elapsed="1.801183"/>
+</kw>
+<kw name="Quando eu preencher nome e cargo sem selecionar time">
+<kw name="Preencher nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:08.285985" level="INFO">Typing text 'Sarah' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T21:59:08.284982" elapsed="0.380826"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:09.091221" level="INFO">Content of text field 'id=form-nome' is 'Sarah'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-03-29T21:59:08.665808" elapsed="0.425413"/>
+</kw>
+<arg>Sarah</arg>
+<status status="PASS" start="2026-03-29T21:59:08.284982" elapsed="0.806239"/>
+</kw>
+<kw name="Preencher cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:09.091766" level="INFO">Typing text 'QA' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T21:59:09.091766" elapsed="0.356587"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-03-29T21:59:09.723123" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6d916]
+	chromedriver!(No symbol) [0x7ff7c3eb8313]
+	chromedriver!(No symbol) [0x7ff7c3eefe92]
+	chromedriver!(No symbol) [0x7ff7c3eea011]
+	chromedriver!(No symbol) [0x7ff7c3ee92c3]
+	chromedriver!(No symbol) [0x7ff7c3e36565]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7c3e3532a]
+	chromedriver!GetHandleVerifier [0x7ff7c4564b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</msg>
+<msg time="2026-03-29T21:59:09.725120" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7f416]
+	chromedriver!(No symbol) [0x7ff7c3ef70e0]
+	chromedriver!(No symbol) [0x7ff7c3f13482]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="FAIL" start="2026-03-29T21:59:09.448353" elapsed="0.278767">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7f416]
+	chromedriver!(No symbol) [0x7ff7c3ef70e0]
+	chromedriver!(No symbol) [0x7ff7c3f13482]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</kw>
+<arg>QA</arg>
+<status status="FAIL" start="2026-03-29T21:59:09.091766" elapsed="0.635354">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7f416]
+	chromedriver!(No symbol) [0x7ff7c3ef70e0]
+	chromedriver!(No symbol) [0x7ff7c3f13482]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</kw>
+<kw name="Clicar em criar card" owner="cadastro">
+<status status="NOT RUN" start="2026-03-29T21:59:09.727120" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-03-29T21:59:08.283984" elapsed="1.443136">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7f416]
+	chromedriver!(No symbol) [0x7ff7c3ef70e0]
+	chromedriver!(No symbol) [0x7ff7c3f13482]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</status>
+</kw>
+<kw name="Então devo ver erro de time">
+<msg time="2026-03-29T21:59:09.727120" level="FAIL">Keyword with same name defined multiple times.</msg>
+<status status="FAIL" start="2026-03-29T21:59:09.727120" elapsed="0.000000">Keyword with same name defined multiple times.</status>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T21:59:09.728120" elapsed="2.125209"/>
+</kw>
+<status status="PASS" start="2026-03-29T21:59:09.728120" elapsed="2.125209"/>
+</kw>
+<status status="FAIL" start="2026-03-29T21:59:06.482801" elapsed="5.370528">Several failures occurred:
+
+1) InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6db2d]
+	chromedriver!(No symbol) [0x7ff7c3e58ca2]
+	chromedriver!(No symbol) [0x7ff7c3e7f416]
+	chromedriver!(No symbol) [0x7ff7c3ef70e0]
+	chromedriver!(No symbol) [0x7ff7c3f13482]
+	chromedriver!(No symbol) [0x7ff7c3eb9298]
+	chromedriver!(No symbol) [0x7ff7c3eba183]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7c4113634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7c41137e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7c40f7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+
+
+2) Keyword with same name defined multiple times.</status>
+</test>
+<status status="FAIL" start="2026-03-29T21:58:49.529332" elapsed="22.325949"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Criar-Card-Invalido" id="s1" pass="2" fail="2" skip="0">Criar-Card-Invalido</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-03-29T21:58:49.524332" level="ERROR">Error in file 'C:\projetosQA\robot\testes\criar-card-invalido.robot' on line 55: Creating keyword 'Então devo ver erro de time' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2026-03-29T21:58:58.308743" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6d916]
+	chromedriver!(No symbol) [0x7ff7c3eb8313]
+	chromedriver!(No symbol) [0x7ff7c3eefe92]
+	chromedriver!(No symbol) [0x7ff7c3eea011]
+	chromedriver!(No symbol) [0x7ff7c3ee92c3]
+	chromedriver!(No symbol) [0x7ff7c3e36565]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7c3e3532a]
+	chromedriver!GetHandleVerifier [0x7ff7c4564b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</msg>
+<msg time="2026-03-29T21:59:09.723123" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7c43e29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7c410a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7c3e6d916]
+	chromedriver!(No symbol) [0x7ff7c3eb8313]
+	chromedriver!(No symbol) [0x7ff7c3eefe92]
+	chromedriver!(No symbol) [0x7ff7c3eea011]
+	chromedriver!(No symbol) [0x7ff7c3ee92c3]
+	chromedriver!(No symbol) [0x7ff7c3e36565]
+	chromedriver!GetHandleVerifier [0x7ff7c440de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7c4408588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7c4429d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7c4126785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7c412facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7c3e3532a]
+	chromedriver!GetHandleVerifier [0x7ff7c4564b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ff9d8537374+14]
+	ntdll!RtlUserThreadStart [0x7ff9d867cc91+21]
+</msg>
+</errors>
+</robot>

@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.11.4 on win32)" generated="2026-03-29T18:19:22.250646" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="C:\projetosQA\robot">
+<suite id="s1-s1" name="Criar-Card-Invalido" source="C:\projetosQA\robot\criar-card-invalido.robot">
+<test id="s1-s1-t1" name="Nao deve criar card com formulario vazio" line="9">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:22.483179" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:19:22.483179" elapsed="1.920569"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:19:24.403748" elapsed="0.029772"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:19:24.434521" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:22.482606" elapsed="1.951915"/>
+</kw>
+<kw name="Quando eu clicar em criar card sem preencher nada">
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:19:24.435520" elapsed="0.484277"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:24.919797" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:24.919797" elapsed="0.571564"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:24.435520" elapsed="1.055841"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:24.434521" elapsed="1.056840"/>
+</kw>
+<kw name="Então devo visualizar mensagens obrigatorias">
+<kw name="Validar todas as mensagens de erro" owner="cadastro">
+<kw name="Validar mensagem de erro do nome" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:25.713160" level="INFO">Element 'id=form-nome-erro' is displayed.</msg>
+<arg>${ERRO_NOME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T18:19:25.491361" elapsed="0.221799"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:25.491361" elapsed="0.221799"/>
+</kw>
+<kw name="Validar mensagem de erro do cargo" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:25.930833" level="INFO">Element 'id=form-cargo-erro' is displayed.</msg>
+<arg>${ERRO_CARGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T18:19:25.713160" elapsed="0.217673"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:25.713160" elapsed="0.217673"/>
+</kw>
+<kw name="Validar mensagem de erro do time" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:26.145606" level="INFO">Element 'id=form-times-erro' is displayed.</msg>
+<arg>${ERRO_TIME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T18:19:25.930833" elapsed="0.214773"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:25.930833" elapsed="0.214773"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:25.491361" elapsed="0.654245"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:25.491361" elapsed="0.654245"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:19:26.145606" elapsed="2.164064"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:26.145606" elapsed="2.165092"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:22.471601" elapsed="5.839097"/>
+</test>
+<test id="s1-s1-t2" name="Nao deve criar card sem nome" line="13">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:28.315193" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:19:28.315193" elapsed="1.664563"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:19:29.979756" elapsed="0.139089"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:19:30.118845" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:28.315193" elapsed="1.803652"/>
+</kw>
+<kw name="Quando eu preencher apenas cargo">
+<kw name="Preencher o campo cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:30.118845" level="INFO">Typing text 'QA' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:30.118845" elapsed="0.390763"/>
+</kw>
+<arg>QA</arg>
+<status status="PASS" start="2026-03-29T18:19:30.118845" elapsed="0.390763"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:19:30.509608" elapsed="0.486977"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:30.996585" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:30.996585" elapsed="0.566167"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:30.509608" elapsed="1.053144"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:30.118845" elapsed="1.443907"/>
+</kw>
+<kw name="Então devo visualizar erro de nome">
+<kw name="Validar mensagem de erro do nome" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:31.783023" level="INFO">Element 'id=form-nome-erro' is displayed.</msg>
+<arg>${ERRO_NOME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T18:19:31.562752" elapsed="0.220271"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:31.562752" elapsed="0.220271"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:31.562752" elapsed="0.220271"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:19:31.783023" elapsed="2.181563"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:31.783023" elapsed="2.181563"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:28.314692" elapsed="5.649894"/>
+</test>
+<test id="s1-s1-t3" name="Nao deve criar card sem cargo" line="17">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:33.964586" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:19:33.964586" elapsed="1.686509"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:19:35.651095" elapsed="0.133601"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:19:35.784696" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:33.964586" elapsed="1.820110"/>
+</kw>
+<kw name="Quando eu preencher apenas nome">
+<kw name="Preencher o campo nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:35.784696" level="INFO">Typing text 'Sarah Silva' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:35.784696" elapsed="0.399468"/>
+</kw>
+<arg>Sarah Silva</arg>
+<status status="PASS" start="2026-03-29T18:19:35.784696" elapsed="0.399468"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:19:36.184164" elapsed="0.484724"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:36.668888" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:36.668888" elapsed="0.567571"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:36.184164" elapsed="1.052295"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:35.784696" elapsed="1.451763"/>
+</kw>
+<kw name="Então devo visualizar erro de cargo">
+<kw name="Validar mensagem de erro do cargo" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:37.455738" level="INFO">Element 'id=form-cargo-erro' is displayed.</msg>
+<arg>${ERRO_CARGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T18:19:37.236459" elapsed="0.219279"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:37.236459" elapsed="0.219279"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:37.236459" elapsed="0.219279"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:19:37.455738" elapsed="2.156655"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:37.455738" elapsed="2.156655"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:33.964586" elapsed="5.647807"/>
+</test>
+<test id="s1-s1-t4" name="Nao deve criar card sem selecionar time" line="21">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:39.614398" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:19:39.614398" elapsed="1.682018"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:19:41.296416" elapsed="0.120074"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:19:41.416490" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:39.614398" elapsed="1.802092"/>
+</kw>
+<kw name="Quando eu preencher nome e cargo sem selecionar time">
+<kw name="Preencher o campo nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:41.416490" level="INFO">Typing text 'Sarah Silva' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:41.416490" elapsed="0.393713"/>
+</kw>
+<arg>Sarah Silva</arg>
+<status status="PASS" start="2026-03-29T18:19:41.416490" elapsed="0.393713"/>
+</kw>
+<kw name="Preencher o campo cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:41.810203" level="INFO">Typing text 'QA' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:41.810203" elapsed="0.362222"/>
+</kw>
+<arg>QA</arg>
+<status status="PASS" start="2026-03-29T18:19:41.810203" elapsed="0.362222"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:19:42.172425" elapsed="0.489910"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:42.662335" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:42.662335" elapsed="0.565660"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:42.172425" elapsed="1.055570"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:41.416490" elapsed="1.811505"/>
+</kw>
+<kw name="Então devo visualizar erro de time">
+<kw name="Validar mensagem de erro do time" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:43.448752" level="INFO">Element 'id=form-times-erro' is displayed.</msg>
+<arg>${ERRO_TIME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-29T18:19:43.227995" elapsed="0.220757"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:43.227995" elapsed="0.220757"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:43.227995" elapsed="0.220757"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:19:43.448752" elapsed="2.146695"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:43.448752" elapsed="2.146695"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:39.613399" elapsed="5.982647"/>
+</test>
+<status status="PASS" start="2026-03-29T18:19:22.282334" elapsed="23.314915"/>
+</suite>
+<suite id="s1-s2" name="Criar-Card-Valido" source="C:\projetosQA\robot\criar-card-valido.robot">
+<test id="s1-s2-t1" name="Deve criar card na Programacao" line="9">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:45.604109" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:19:45.604109" elapsed="1.693739"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:19:47.297848" elapsed="0.121293"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:19:47.419141" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:45.604109" elapsed="1.815032"/>
+</kw>
+<kw name="Quando eu criar um colaborador valido">
+<kw name="Criar card do colaborador" owner="cadastro">
+<kw name="Preencher o formulario do colaborador" owner="cadastro">
+<kw name="Preencher o campo nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:47.421149" level="INFO">Typing text 'Sarah Silva' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:47.421149" elapsed="0.396996"/>
+</kw>
+<arg>${nome}</arg>
+<status status="PASS" start="2026-03-29T18:19:47.421149" elapsed="0.396996"/>
+</kw>
+<kw name="Preencher o campo cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:47.818145" level="INFO">Typing text 'QA' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:47.818145" elapsed="0.362677"/>
+</kw>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:19:47.818145" elapsed="0.362677"/>
+</kw>
+<kw name="Preencher o campo imagem" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:48.180822" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id=form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:48.180822" elapsed="0.382148"/>
+</kw>
+<arg>${imagem}</arg>
+<status status="PASS" start="2026-03-29T18:19:48.180822" elapsed="0.382148"/>
+</kw>
+<kw name="Selecionar o time" owner="cadastro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:48.564008" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:48.562970" elapsed="0.268670"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:48.831640" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${SELECIONAR_TIME}[${indice}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:48.831640" elapsed="0.230459"/>
+</kw>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:19:48.562970" elapsed="0.499129"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:19:47.420148" elapsed="1.641951"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:19:49.062099" elapsed="0.495494"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:49.557593" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:49.557593" elapsed="0.568708"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:49.062099" elapsed="1.064202"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:19:47.420148" elapsed="2.706153"/>
+</kw>
+<arg>Sarah Silva</arg>
+<arg>QA</arg>
+<arg>https://picsum.photos/200/300</arg>
+<arg>0</arg>
+<status status="PASS" start="2026-03-29T18:19:47.420148" elapsed="2.706153"/>
+</kw>
+<kw name="Então devo visualizar o card criado">
+<kw name="Validar que o card foi criado" owner="cadastro">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${nome}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-29T18:19:50.126301" elapsed="0.112638"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:50.449809" level="INFO">Current page contains text 'Sarah Silva'.</msg>
+<arg>${nome}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:19:50.238939" elapsed="0.210870"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:50.663685" level="INFO">Current page contains text 'QA'.</msg>
+<arg>${cargo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:19:50.449809" elapsed="0.213876"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:19:50.126301" elapsed="0.537384"/>
+</kw>
+<arg>Sarah Silva</arg>
+<arg>QA</arg>
+<status status="PASS" start="2026-03-29T18:19:50.126301" elapsed="0.537384"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:19:50.663685" elapsed="2.144353"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:50.663685" elapsed="2.144353"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:45.603247" elapsed="7.205479"/>
+</test>
+<test id="s1-s2-t2" name="Deve criar card no Front-End" line="13">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:52.808726" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:19:52.808726" elapsed="1.703982"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:19:54.512708" elapsed="0.120342"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:19:54.633050" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:52.808726" elapsed="1.824324"/>
+</kw>
+<kw name="Quando eu criar um colaborador valido">
+<kw name="Criar card do colaborador" owner="cadastro">
+<kw name="Preencher o formulario do colaborador" owner="cadastro">
+<kw name="Preencher o campo nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:54.635049" level="INFO">Typing text 'Ana Souza' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:54.635049" elapsed="0.394397"/>
+</kw>
+<arg>${nome}</arg>
+<status status="PASS" start="2026-03-29T18:19:54.634050" elapsed="0.395396"/>
+</kw>
+<kw name="Preencher o campo cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:55.029446" level="INFO">Typing text 'Front-End Developer' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:55.029446" elapsed="0.371306"/>
+</kw>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:19:55.029446" elapsed="0.371306"/>
+</kw>
+<kw name="Preencher o campo imagem" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:55.401678" level="INFO">Typing text 'https://picsum.photos/200/301' into text field 'id=form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:55.400752" elapsed="0.377605"/>
+</kw>
+<arg>${imagem}</arg>
+<status status="PASS" start="2026-03-29T18:19:55.400752" elapsed="0.377605"/>
+</kw>
+<kw name="Selecionar o time" owner="cadastro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:55.778357" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:55.778357" elapsed="0.268326"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:56.046683" level="INFO">Clicking element '//option[contains(.,'Front-End')]'.</msg>
+<arg>${SELECIONAR_TIME}[${indice}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:56.046683" elapsed="0.229602"/>
+</kw>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:19:55.778357" elapsed="0.497928"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:19:54.634050" elapsed="1.642235"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:19:56.276285" elapsed="0.483688"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:56.759973" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:19:56.759973" elapsed="0.569758"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:56.276285" elapsed="1.053446"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:19:54.634050" elapsed="2.695681"/>
+</kw>
+<arg>Ana Souza</arg>
+<arg>Front-End Developer</arg>
+<arg>https://picsum.photos/200/301</arg>
+<arg>1</arg>
+<status status="PASS" start="2026-03-29T18:19:54.633050" elapsed="2.696681"/>
+</kw>
+<kw name="Então devo visualizar o card criado">
+<kw name="Validar que o card foi criado" owner="cadastro">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${nome}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-29T18:19:57.330830" elapsed="0.111260"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:57.652526" level="INFO">Current page contains text 'Ana Souza'.</msg>
+<arg>${nome}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:19:57.442090" elapsed="0.210436"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:19:57.865570" level="INFO">Current page contains text 'Front-End Developer'.</msg>
+<arg>${cargo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:19:57.652526" elapsed="0.213044"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:19:57.330830" elapsed="0.534740"/>
+</kw>
+<arg>Ana Souza</arg>
+<arg>Front-End Developer</arg>
+<status status="PASS" start="2026-03-29T18:19:57.329731" elapsed="0.535839"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:19:57.866578" elapsed="2.149188"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:57.865570" elapsed="2.150763"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:19:52.808726" elapsed="7.207861"/>
+</test>
+<test id="s1-s2-t3" name="Deve criar card em Data Science" line="17">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:00.016587" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:20:00.016587" elapsed="1.712306"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:20:01.728893" elapsed="0.123002"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:20:01.851895" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:00.016587" elapsed="1.835308"/>
+</kw>
+<kw name="Quando eu criar um colaborador valido">
+<kw name="Criar card do colaborador" owner="cadastro">
+<kw name="Preencher o formulario do colaborador" owner="cadastro">
+<kw name="Preencher o campo nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:01.851895" level="INFO">Typing text 'Bruno Lima' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:01.851895" elapsed="0.393544"/>
+</kw>
+<arg>${nome}</arg>
+<status status="PASS" start="2026-03-29T18:20:01.851895" elapsed="0.393544"/>
+</kw>
+<kw name="Preencher o campo cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:02.245439" level="INFO">Typing text 'Cientista de Dados' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:02.245439" elapsed="0.377406"/>
+</kw>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:20:02.245439" elapsed="0.377406"/>
+</kw>
+<kw name="Preencher o campo imagem" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:02.622845" level="INFO">Typing text 'https://picsum.photos/200/302' into text field 'id=form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:02.622845" elapsed="0.381130"/>
+</kw>
+<arg>${imagem}</arg>
+<status status="PASS" start="2026-03-29T18:20:02.622845" elapsed="0.381130"/>
+</kw>
+<kw name="Selecionar o time" owner="cadastro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:03.003975" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:03.003975" elapsed="0.269473"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:03.273448" level="INFO">Clicking element '//option[contains(.,'Data Science')]'.</msg>
+<arg>${SELECIONAR_TIME}[${indice}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:03.273448" elapsed="0.227969"/>
+</kw>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:20:03.003975" elapsed="0.497442"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:20:01.851895" elapsed="1.649522"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:20:03.501417" elapsed="0.493724"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:03.995141" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:03.995141" elapsed="0.570513"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:03.501417" elapsed="1.064237"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:20:01.851895" elapsed="2.713759"/>
+</kw>
+<arg>Bruno Lima</arg>
+<arg>Cientista de Dados</arg>
+<arg>https://picsum.photos/200/302</arg>
+<arg>2</arg>
+<status status="PASS" start="2026-03-29T18:20:01.851895" elapsed="2.713759"/>
+</kw>
+<kw name="Então devo visualizar o card criado">
+<kw name="Validar que o card foi criado" owner="cadastro">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${nome}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-29T18:20:04.565654" elapsed="0.112183"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:04.888416" level="INFO">Current page contains text 'Bruno Lima'.</msg>
+<arg>${nome}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:20:04.677837" elapsed="0.210579"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:05.102073" level="INFO">Current page contains text 'Cientista de Dados'.</msg>
+<arg>${cargo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:20:04.888416" elapsed="0.213657"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:20:04.565654" elapsed="0.536419"/>
+</kw>
+<arg>Bruno Lima</arg>
+<arg>Cientista de Dados</arg>
+<status status="PASS" start="2026-03-29T18:20:04.565654" elapsed="0.536419"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:20:05.102073" elapsed="2.261315"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:05.102073" elapsed="2.261315"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:00.016587" elapsed="7.346801"/>
+</test>
+<test id="s1-s2-t4" name="Deve criar card em Devops" line="21">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:07.363388" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-29T18:20:07.363388" elapsed="1.677383"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>780</arg>
+<arg>1020</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-03-29T18:20:09.040771" elapsed="0.124796"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-29T18:20:09.165567" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:07.363388" elapsed="1.802179"/>
+</kw>
+<kw name="Quando eu criar um colaborador valido">
+<kw name="Criar card do colaborador" owner="cadastro">
+<kw name="Preencher o formulario do colaborador" owner="cadastro">
+<kw name="Preencher o campo nome" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:09.165567" level="INFO">Typing text 'Carla Rocha' into text field 'id=form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:09.165567" elapsed="0.400462"/>
+</kw>
+<arg>${nome}</arg>
+<status status="PASS" start="2026-03-29T18:20:09.165567" elapsed="0.400462"/>
+</kw>
+<kw name="Preencher o campo cargo" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:09.566029" level="INFO">Typing text 'DevOps Engineer' into text field 'id=form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:09.566029" elapsed="0.371966"/>
+</kw>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:20:09.566029" elapsed="0.371966"/>
+</kw>
+<kw name="Preencher o campo imagem" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:09.937995" level="INFO">Typing text 'https://picsum.photos/200/303' into text field 'id=form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:09.937995" elapsed="0.379027"/>
+</kw>
+<arg>${imagem}</arg>
+<status status="PASS" start="2026-03-29T18:20:09.937995" elapsed="0.379027"/>
+</kw>
+<kw name="Selecionar o time" owner="cadastro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:10.318060" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:10.317022" elapsed="0.270472"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:10.587494" level="INFO">Clicking element '//option[contains(.,'Devops')]'.</msg>
+<arg>${SELECIONAR_TIME}[${indice}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:10.587494" elapsed="0.229084"/>
+</kw>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:20:10.317022" elapsed="0.499556"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:20:09.165567" elapsed="1.651011"/>
+</kw>
+<kw name="Clicar no botao criar card" owner="cadastro">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BOTAO_CARD}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-29T18:20:10.816578" elapsed="0.484840"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:11.301418" level="INFO">Clicking button 'id=form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-29T18:20:11.301418" elapsed="0.570569"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:10.816578" elapsed="1.055409"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<arg>${imagem}</arg>
+<arg>${indice}</arg>
+<status status="PASS" start="2026-03-29T18:20:09.165567" elapsed="2.706420"/>
+</kw>
+<arg>Carla Rocha</arg>
+<arg>DevOps Engineer</arg>
+<arg>https://picsum.photos/200/303</arg>
+<arg>3</arg>
+<status status="PASS" start="2026-03-29T18:20:09.165567" elapsed="2.706420"/>
+</kw>
+<kw name="Então devo visualizar o card criado">
+<kw name="Validar que o card foi criado" owner="cadastro">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${nome}</arg>
+<arg>2s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-29T18:20:11.871987" elapsed="0.110425"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:12.193235" level="INFO">Current page contains text 'Carla Rocha'.</msg>
+<arg>${nome}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:20:11.982412" elapsed="0.210823"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-29T18:20:12.406368" level="INFO">Current page contains text 'DevOps Engineer'.</msg>
+<arg>${cargo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-29T18:20:12.193235" elapsed="0.213133"/>
+</kw>
+<arg>${nome}</arg>
+<arg>${cargo}</arg>
+<status status="PASS" start="2026-03-29T18:20:11.871987" elapsed="0.534381"/>
+</kw>
+<arg>Carla Rocha</arg>
+<arg>DevOps Engineer</arg>
+<status status="PASS" start="2026-03-29T18:20:11.871987" elapsed="0.534381"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-29T18:20:12.406368" elapsed="2.169425"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:12.406368" elapsed="2.170388"/>
+</kw>
+<status status="PASS" start="2026-03-29T18:20:07.363388" elapsed="7.213368"/>
+</test>
+<status status="PASS" start="2026-03-29T18:19:45.599252" elapsed="28.980120"/>
+</suite>
+<status status="PASS" start="2026-03-29T18:19:22.251615" elapsed="52.327757"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot" id="s1" pass="8" fail="0" skip="0">Robot</stat>
+<stat name="Criar-Card-Invalido" id="s1-s1" pass="4" fail="0" skip="0">Robot.Criar-Card-Invalido</stat>
+<stat name="Criar-Card-Valido" id="s1-s2" pass="4" fail="0" skip="0">Robot.Criar-Card-Valido</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
