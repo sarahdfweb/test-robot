@@ -23,7 +23,11 @@
     <li>VS Code – editor de código usado no desenvolvimento</li>
   </ul>
   
-   ![436226592-5c6dc738-c964-46c5-be0e-fdfec6446a63](https://github.com/user-attachments/assets/2ded7de1-ec75-4d04-b044-9a8c69b94808)
+ 
+
+https://github.com/user-attachments/assets/a3fb8384-5ac8-4fb4-b5d8-018482648570
+
+
 
 </body>
 </html>
