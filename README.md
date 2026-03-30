@@ -18,7 +18,6 @@
   <ul class="tech">
     <li>Robot Framework – estrutura principal para criação dos testes automatizados</li>
     <li>SeleniumLibrary – para interação com os elementos do navegador</li>
-    <li>FakerLibrary – para gerar dados aleatórios como nome, cargo e imagens</li>
     <li>Python – linguagem base para o projeto</li>
     <li>VS Code – editor de código usado no desenvolvimento</li>
   </ul>
